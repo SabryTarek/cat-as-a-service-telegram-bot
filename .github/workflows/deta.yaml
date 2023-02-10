@@ -1,6 +1,12 @@
 name: Deploy to Deta
+<<<<<<< HEAD
 on: push
     workflow_dispatch
+=======
+on:
+  push:
+  workflow_dispatch:
+>>>>>>> 275ff6f (add workflow_dispatch event to github workflow)
 
 jobs:
   deploy:
