@@ -2,6 +2,8 @@ name: Deploy to Deta
 
 on:
   push:
+    branches:
+    - main
   workflow_dispatch:
 
 jobs:
@@ -18,4 +20,5 @@ jobs:
           deta-access-token: ${{ secrets.DETA_TOKEN }} #Deta access token https://docs.deta.sh/docs/cli/auth
           deta-name: 'cat-as-a-service-telegram-bot' #Deta Micro name https://docs.deta.sh/docs/cli/commands/#deta-clone
           deta-project: 'telegram-bots' #Optional: Deta project name https://docs.deta.sh/docs/cli/commands/#deta-clone
-          # deta-project-dir: 'other-dir' #Optional: directory to be deployed on Deta. Default is the root "." 
+          # deta-project-dir: 'other-dir' #Optional: directory to be deployed on Deta. Default is the root "."
+        
